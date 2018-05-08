@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Mar 15 11:11:20 2018
+Spyder Editor
 
-@author: admin
+This is a temporary script file.
 """
 
 class Operation():
@@ -14,6 +14,8 @@ class Operation():
         
         for node in input_nodes:
             node.output_nodes.append(self)
+        
+        _default_graph.operations.append(self)
             
     def compute(self):
         pass 
@@ -43,5 +45,4 @@ class matmul(Operation):
         
     def compute(self, x_var,y_var):
         self.inputs = [x_var,y_var]
-        return x_var.dot(y_var)
-    
+return x_var.dot(y_var)
